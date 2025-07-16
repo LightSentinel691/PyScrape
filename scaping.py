@@ -26,7 +26,6 @@ def scrape_books(url="https://books.toscrape.com/"):
 
 def convert_prices(data, from_currency="GBP", to_currency="KES"):
     try:
-        # You can replace this with a real API like exchangerate-api.com
         response = requests.get(f"https://v6.exchangerate-api.com/v6/c31a21e4d24ea147df9d6594/pair/{from_currency}/{to_currency}")
         rate = response.json()["conversion_rate"]
 
